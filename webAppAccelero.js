@@ -9,6 +9,7 @@ function setup() {
   canvas.mousePressed(changeGray);
   canvas.elt.style.border = '3px solid black';
   //canvas.keyPressed(changeViaKey);
+  textSize(20);
 }
 
 function draw() {
@@ -22,11 +23,18 @@ function draw() {
     xV--;
   background(100 + xV, 50, 50);
   ellipse(200, 200, xV, xV);
-  fill(g)
+
+   fill(50,50,200);
 
   if(accelerationX > 0)
     d++;
+  // else
+  //   d--
   ellipse(50, 50, d, d);
+
+  text(accelerationX, 50, 340);
+  text(turnAxis, 50, 365);
+  text(accelerationX-pAccelerationX, 50, 385);
 }
 
 // this function fires with any click anywhere
