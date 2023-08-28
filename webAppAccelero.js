@@ -33,8 +33,7 @@ function draw() {
   ellipse(50, 50, d, d);
   fill(0);
   text(accelerationX, 50, 350);
-  text((accelerationX-pAccelerationX)), 50, 400);
-  text(tAxis, 50, 425);
+  text(tAxis, 50, 400);
 }
 
 // this function fires with any click anywhere
