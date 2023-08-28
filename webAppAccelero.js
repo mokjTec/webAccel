@@ -2,6 +2,7 @@ let xV = 50;
 let vend = true;
 let canvas;
 let g = 20; let d = 10;
+let tAxis = 'ikke vendt';
 
 function setup() {
   canvas = createCanvas(400, 600);
@@ -25,15 +26,15 @@ function draw() {
   ellipse(200, 200, xV, xV);
 
   fill(50,50,100);
-  if(accelerationX > 0.5)
+  if(accelerationX > 0.4)
     d++;
-  else if( accelerationX < -0.5)
-    d--
+  else if( accelerationX < -0.4)
+    d--;
   ellipse(50, 50, d, d);
   fill(0);
   text(accelerationX, 50, 350);
-  text(turnAxis, 50, 380);
-  text((accelerationX-pAccelerationX), 50, 400);
+  text((accelerationX-pAccelerationX)), 50, 400);
+  text(tAxis, 50, 380);
 }
 
 // this function fires with any click anywhere
@@ -41,6 +42,9 @@ function mousePressed() {
   //d = d + 10;
 }
 
+function deviceTurned() {
+  tAxis = turnAxis;
+}
 function keyPressed() {
   // tilføj p til dom-træet
   let p = createP('ny paragraf tilføjet main-elementet');
