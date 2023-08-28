@@ -4,7 +4,7 @@ let canvas;
 let g = 20; let d = 10;
 
 function setup() {
-  canvas = createCanvas(400, 400);
+  canvas = createCanvas(400, 600);
   background(0, 0, 200);
   canvas.mousePressed(changeGray);
   canvas.elt.style.border = '3px solid black';
@@ -31,9 +31,9 @@ function draw() {
     d--
   ellipse(50, 50, d, d);
   fill(0);
-  text(accelerationX, 50, 320);
-  text(turnAxis, 50, 345);
-  text((accelerationX-pAccelerationX), 50, 365);
+  text(accelerationX, 50, 350);
+  text(turnAxis, 50, 380);
+  text((accelerationX-pAccelerationX), 50, 400);
 }
 
 // this function fires with any click anywhere
