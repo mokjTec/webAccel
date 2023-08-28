@@ -36,11 +36,11 @@ function draw() {
   fill(0);
   text(accelerationX, 50, 350);
   text(tAxis, 50, 400);
-  text(maxAccel, 50, 425);
-  text(minusMaxAccel, 50, 455);
+  text("max accel er: " + maxAccel, 50, 425);
+  text("minusMac accel er: " + minusMaxAccel, 50, 455);
   if(accelerationX > maxAccel)
     maxAccel = accelerationX;
-  if(accelerationX < minusMaxAccel)
+  else if(accelerationX < minusMaxAccel)
     minusMaxAccel = accelerationX;
 }
 
