@@ -24,17 +24,16 @@ function draw() {
   background(100 + xV, 50, 50);
   ellipse(200, 200, xV, xV);
 
-   fill(50,50,200);
-
-  if(accelerationX > 0)
+  fill(50,50,100);
+  if(accelerationX > 0.5)
     d++;
-  // else
-  //   d--
+  else if( accelerationX < -0.5)
+    d--
   ellipse(50, 50, d, d);
-
-  text(accelerationX, 50, 340);
-  text(turnAxis, 50, 365);
-  text(accelerationX-pAccelerationX, 50, 385);
+  fill(0);
+  text(accelerationX, 50, 320);
+  text(turnAxis, 50, 345);
+  text((accelerationX-pAccelerationX), 50, 365);
 }
 
 // this function fires with any click anywhere
