@@ -5,6 +5,7 @@ let g = 20; let d = 10;
 let tAxis = "ikke vendt";
 let maxAccel = 0;
 let minusMaxAccel = 0;
+let maxAccelY = 0;
 
 function setup() {
   canvas = createCanvas(400, 600);
@@ -34,14 +35,17 @@ function draw() {
     d--;
   ellipse(50, 50, d, d);
   fill(0);
-  text(accelerationX, 50, 350);
+  text(accelerationX, 50, 375);
   text(tAxis, 50, 400);
   text("max accel er: " + maxAccel, 50, 425);
-  text("minusMac accel er: " + minusMaxAccel, 50, 455);
+  text("minusMac accel er: " + minusMaxAccel, 50, 450);
+  text("maxAccel y er: " + maxAccelY, 50, 475);
   if(accelerationX > maxAccel)
     maxAccel = accelerationX;
   else if(accelerationX < minusMaxAccel)
     minusMaxAccel = accelerationX;
+  if(accelerationY > maxAccelY)
+    maxAccelY = accelerationY;
 }
 
 // this function fires with any click anywhere
