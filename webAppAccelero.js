@@ -2,7 +2,7 @@ let xV = 50;
 let vend = true;
 let canvas;
 let g = 20; let d = 10;
-let tAxis = 'ikke vendt';
+let tAxis = "ikke vendt";
 
 function setup() {
   canvas = createCanvas(400, 600);
@@ -34,7 +34,7 @@ function draw() {
   fill(0);
   text(accelerationX, 50, 350);
   text((accelerationX-pAccelerationX)), 50, 400);
-  text(tAxis, 50, 380);
+  text(tAxis, 50, 425);
 }
 
 // this function fires with any click anywhere
