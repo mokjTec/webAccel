@@ -48,12 +48,12 @@ function keyPressed() {
   p.position(50, 10);
   p.style('position', 'relative');
   // lav skriftstørrelse om på html-element med id overskrift
-  let a = select('#overskrift');
-  a.style('font-size', '42px');
+  // let a = select('#overskrift');
+  // a.style('font-size', '42px');
   // tilføj border til element via klasse-navn
-  let b = select('.lilleOverskrift');
-  b.style('font-size', '42px');
-  b.style('border', '5px solid');
+  // let b = select('.lilleOverskrift');
+  // b.style('font-size', '42px');
+  // b.style('border', '5px solid');
   // føj p til en div oven over canvas i main
   // standard-js til at fange element
   let c = document.getElementById('beholder');
