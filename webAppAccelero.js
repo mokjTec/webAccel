@@ -3,6 +3,7 @@ let vend = true;
 let canvas;
 let g = 20; let d = 10;
 let tAxis = "ikke vendt";
+let maxAccel = 0;
 
 function setup() {
   canvas = createCanvas(400, 600);
@@ -34,6 +35,9 @@ function draw() {
   fill(0);
   text(accelerationX, 50, 350);
   text(tAxis, 50, 400);
+  text(maxAccel, 50, 425);
+  if(accelerationX > maxAccel)
+    maxAccel = accelerationX;
 }
 
 // this function fires with any click anywhere
