@@ -4,6 +4,7 @@ let canvas;
 let g = 20; let d = 10;
 let tAxis = "ikke vendt";
 let maxAccel = 0;
+let minusMaxAccel = 0;
 
 function setup() {
   canvas = createCanvas(400, 600);
@@ -38,6 +39,8 @@ function draw() {
   text(maxAccel, 50, 425);
   if(accelerationX > maxAccel)
     maxAccel = accelerationX;
+  if(accelerationX < minusMaxAccel)
+    minusMaxAccel = accelerationX;
 }
 
 // this function fires with any click anywhere
